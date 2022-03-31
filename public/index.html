@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script>
+      const url = window.location.origin
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+    <script src="./assets/js/script.js" defer></script>
+    <title>Contador</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Curso de Ano Novo !</h1>
+      <div class="row">
+        <div class="contadores">
+          <span class="numero" id="dias">0</span>
+          <span class="texto">Dias</span>
+        </div>
+        <div class="contadores">
+          <span class="numero" id="horas">0</span>
+          <span class="texto">Horas</span>
+        </div>
+        <div class="contadores">
+          <span class="numero" id="minutos">0</span>
+          <span class="texto">Minutos</span>
+        </div>
+        <div class="contadores">
+          <span class="numero" id="segundos">0</span>
+          <span class="texto">Segundos</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <form action="" method="post" id="submitIncreverse">
+          <div style="width:70%; padding-right: 5px; padding-top: 5px;">
+            <input type="email" name="email" id="email" placeholder="Inscreva-se para o curso de ano novo!">
+            <span class="input-result"><small id="retorno">teste</small></span>
+          </div>
+          <div>
+            <button type="submit">Inscrever-se</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

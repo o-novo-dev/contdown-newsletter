@@ -1,0 +1,21 @@
+{
+  "name": "supabase-auth-vanilla-js",
+  "version": "0.0.1",
+  "description": "basic example for supabase with js",
+  "main": "index.js",
+  "scripts": {
+    "servedev": "nodemon app.js",
+    "serve": "node app.js"
+  },
+  "author": "matheus de mello",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^1.33.2",
+    "body-parser": "^1.19.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "serve-static": "^1.15.0"
+  },
+  "devDependencies": {}
+}
