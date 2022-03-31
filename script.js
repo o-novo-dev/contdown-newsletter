@@ -30,20 +30,21 @@ setInterval(countdown, 1000);
 document.getElementById('submitIncreverse').onsubmit = (e) => {
   e.preventDefault();
   document.getElementById('retorno').innerText = '';
+  console.dir(e);
   console.log(e.target.elements.email.value);
   
   // Envia uma requisição post
   axios({
     method: "post",
-    url: url + "/api/newsletter/add",
+    url: url + "inscrever.php",
     data: {
       email: e.target.elements.email.value,
     }, 
     responseType: 'json'
   }).then(function (response) {
     if(response.data.success == 'false')
-      document.getElementById('retorno').innerText = response.data.message;
+      document.getElementById('retorno').innerText = response.data.msg;
     else
-      alert(response.data.message)
+      alert(response.data.msg)
   });
 }
