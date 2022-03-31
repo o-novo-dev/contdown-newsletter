@@ -1,15 +1,15 @@
 const express = require('express');
-const bodyParser = require("body-parser");
+/*const bodyParser = require("body-parser");
 const serveStatic = require('serve-static');
 const cors = require("cors")
-const path = require('path');
+const path = require('path');*/
 require('dotenv').config();
 
 const newslatter = require("./api/newsletter");
 
 var app = express();
 
-var corsOptions = {
+/*var corsOptions = {
   origin: "*", // colocar aqui o ip externo e o nome do site
   methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH'],
   preflightContinue: true,
@@ -19,11 +19,11 @@ var corsOptions = {
 app.use(cors(corsOptions))
 
 app.use(bodyParser.urlencoded({extended: false}))
-app.use(bodyParser.json())
+app.use(bodyParser.json())*/
 
 app.use("/api/newsletter", newslatter);
 
-app.use(serveStatic(path.join(__dirname, 'public')))
+//app.use(serveStatic(path.join(__dirname, 'public')))
 
 const PORT = process.env.PORT || 8080;
 
